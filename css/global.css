@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #222227;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: aliceblue;
+}
+

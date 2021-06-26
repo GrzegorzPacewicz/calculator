@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Kantor</title>
+</head>
+
+<body>
+
+    <main>
+        <form class="form js-form">
+            <h1 class="form__header">Prosty kalkulator walut</h1>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Kwota do przeliczenia:</legend>
+                <label class="form__label">
+                    <span>PLN</span>
+                    <input class="form__inputAmount js-form__inputAmount" type="number" min="1" required
+                        placeholder="Wpisz kwotę" value="" step="1">
+                </label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Przelicz na*:</legend>
+                <select class="form__select js-form__select" name="currency">
+                    <option class="form__option" value="EUR" selected>EUR</option>
+                    <option class="form__option" value="GBP">GBP</option>
+                    <option class="form__option" value="USD">USD</option>
+                </select>
+                <p class="form_caution">*Kurs NBP z dnia 18.06.2021</p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Wynik:</legend>
+                <button class="form__button">Otrzymasz</button>
+                <input class="form__result js-form__result" type="text" name="result" readonly>
+            </fieldset>
+            <button class="form__button form__button--reset" type="reset">Wyczyść</button>
+        </form>
+    </main>
+</body>
+</html>
