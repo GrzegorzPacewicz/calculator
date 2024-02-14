@@ -1,22 +1,21 @@
+@import url('link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* COLORS */
+  --white: #fff;
+  --gray: #a5a5a5;
+  --light-gray: #c4c4c4;
+  --medium-gray: #444;
+  --dark-gray: #333;
+  --light-orange: #ffb657;
+  --orange: #ff9d20;
+  --dark-blue: #1f2632;
+  --black: #000;
 }
 
-body {
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }

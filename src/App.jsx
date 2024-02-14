@@ -1,9 +1,14 @@
-import "./App.module.css";
+import styles from "./App.module.css";
+import { Display } from "./components/Display/Display";
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <div className={styles.calculatorView}>
+        <div className={styles.viewport}>
+          <Display />
+        </div>
+      </div>
     </>
   );
 }
