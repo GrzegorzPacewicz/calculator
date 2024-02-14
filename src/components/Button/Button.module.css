@@ -1,0 +1,42 @@
+ .button {
+     border: none;
+     border-radius: 50px;
+     width: 75px;
+     height: 75px;
+     font-size: 2rem;
+     cursor: pointer;
+
+     &.fx-key {
+         background-color: var(--gray);
+         color: var(--black);
+
+         &:hover {
+             background-color: var(--light-gray);
+         }
+     }
+
+     &.numeric-key {
+         background-color: var(--dark-gray);
+
+         &:hover {
+             background-color: var(--medium-gray);
+         }
+     }
+
+     &.op-key {
+         background-color: var(--orange);
+         font-size: 3rem;
+
+         &:hover {
+             background-color: var(--light-orange);
+         }
+     }
+
+     &.special {
+         width: 100%;
+         grid-column-start: 1;
+         grid-column-end: span 2;
+         text-align: left;
+         padding-left: 25px;
+     }
+ }
