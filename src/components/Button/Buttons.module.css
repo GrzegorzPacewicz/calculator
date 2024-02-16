@@ -1,0 +1,78 @@
+.button {
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.functionButton {
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    cursor: pointer;
+
+    background-color: var(--gray);
+    color: var(--black);
+    font-weight: 200;
+}
+
+.functionButton:hover {
+    background-color: var(--light-gray);
+}
+
+
+.numericButton {
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    font-weight: 200;
+
+    cursor: pointer;
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.numericButton:hover {
+    background-color: var(--medium-gray);
+}
+
+
+.opButton {
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.opButton:hover {
+    background-color: var(--light-orange);
+}
+
+
+.specialButton {
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    cursor: pointer;
+
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    text-align: left;
+    padding-left: 25px;
+    font-weight: 200;
+}
