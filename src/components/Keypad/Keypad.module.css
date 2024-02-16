@@ -1,6 +1,14 @@
-.container {
+.wrapper {
+    width: 97%;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+}
+
+.container {
+    display: grid;
+    flex-flow: row nowrap;
     justify-content: space-around;
 }
 
@@ -17,7 +25,6 @@
 
 .operators {
     display: flex;
-    /* flex-flow: column wrap; */
+    flex-flow: column wrap;
     justify-content: space-between;
-    color: white;
 }

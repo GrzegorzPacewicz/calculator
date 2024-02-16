@@ -1,4 +1,9 @@
-import { FunctionButton, NummericButton, OpButton } from "../Button/Buttons";
+import {
+  FunctionButton,
+  NummericButton,
+  OpButton,
+  SpecialButton,
+} from "../Button/Buttons";
 import styles from "./Keypad.module.css";
 
 export function Keypad(props) {
@@ -34,34 +39,37 @@ export function Keypad(props) {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.keysWrapper}></div>
-      {functionKeys.map((functionKey) => (
-        <FunctionButton
-          key={functionKey.label}
-          label={functionKey.label}
-          value={functionKey.value}
-          onClick={handleClickButton}
-        />
-      ))}
+    <div className={styles.wrapper}>
+      <div className={styles.keysWrapper}>
+        {functionKeys.map((functionKey) => (
+          <FunctionButton
+            key={functionKey.label}
+            label={functionKey.label}
+            value={functionKey.value}
+            onClick={handleClickButton}
+          />
+        ))}
 
-      {numericKeys.map((numericKey) => (
-        <NummericButton
-          key={numericKey}
-          label={numericKey}
-          value={numericKey}
-          onClick={handleClickButton}
-        />
-      ))}
-
-      {lastRowKeys.map((lastRowKey) => (
-        <NummericButton
-          key={lastRowKey.label}
-          label={lastRowKey.label}
-          value={lastRowKey.value}
-          onClick={handleClickButton}
-        />
-      ))}
+        {numericKeys.map((numericKey) => (
+          <NummericButton
+            key={numericKey}
+            label={numericKey}
+            value={numericKey}
+            onClick={handleClickButton}
+          />
+        ))}
+        {/* 
+        {lastRowKeys.map((lastRowKey) => (
+          <NummericButton
+            key={lastRowKey.label}
+            label={lastRowKey.label}
+            value={lastRowKey.value}
+            onClick={handleClickButton}
+          />
+        ))} */}
+        <SpecialButton label={0} onClick={handleClickButton} />
+        <NummericButton label={"."} onClick={handleClickButton} />
+      </div>
       <div className={styles.operators}>
         {operatorKeys.map((operatorKey) => (
           <OpButton
