@@ -4,6 +4,12 @@
     justify-content: space-around;
 }
 
+.functionButtons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 9px;
+}
+
 .keys {
     display: grid;
     color: white;
@@ -14,72 +20,4 @@
     flex-flow: column wrap;
     justify-content: space-between;
     color: white;
-}
-
-.button {
-    border: none;
-    border-radius: 50px;
-    width: 75px;
-    height: 75px;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.fxKey {
-    border: none;
-    border-radius: 50px;
-    width: 75px;
-    height: 75px;
-    font-size: 2rem;
-    cursor: pointer;
-
-    background-color: var(--gray);
-    color: var(--black);
-}
-
-.fxKey:hover {
-    background-color: var(--light-gray);
-}
-
-
-.numericKey {
-    border: none;
-    border-radius: 50px;
-    width: 75px;
-    height: 75px;
-    font-size: 2rem;
-
-    cursor: pointer;
-    background-color: var(--dark-gray);
-}
-
-.numericKey:hover {
-    background-color: var(--medium-gray);
-}
-
-
-.opKey {
-    border: none;
-    border-radius: 50px;
-    width: 75px;
-    height: 75px;
-
-    cursor: pointer;
-    background-color: var(--orange);
-    font-size: 3rem;
-}
-
-.opKey:hover {
-    background-color: var(--light-orange);
-}
-
-
-.specialKey {
-
-
-    width: 100%;
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    text-align: left;
-    padding-left: 25px;
 }
