@@ -41,19 +41,22 @@
 }
 
 
-.opButton {
+.operatorButton {
     border: none;
     border-radius: 50px;
     width: 75px;
     height: 75px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     background-color: var(--orange);
     color: var(--white);
     font-size: 3rem;
 }
 
-.opButton:hover {
+.operatorButton:hover {
     background-color: var(--light-orange);
 }
 

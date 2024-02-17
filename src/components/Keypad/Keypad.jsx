@@ -1,7 +1,7 @@
 import {
   FunctionButton,
   NummericButton,
-  OpButton,
+  OperatorButton,
   SpecialButton,
 } from "../Button/Buttons";
 import styles from "./Keypad.module.css";
@@ -14,7 +14,7 @@ export function Keypad(props) {
 
   const functionKeys = [
     { label: allClear ? "AC" : "C", value: allClear ? "AC" : "C" },
-    { label: "±", value: "+/-" },
+    { label: "+/-", value: "+/-" },
     { label: "%", value: "%" },
   ];
 
@@ -28,15 +28,15 @@ export function Keypad(props) {
     { label: "=", value: "=" },
   ];
 
-  const lastRowKeys = [
-    {
-      label: "0",
-      value: "0",
-      type: "numeric",
-      buttonStyle: "numeric-key special",
-    },
-    { label: "·", value: ".", type: "fx", buttonStyle: "numeric-key" },
-  ];
+  // const lastRowKeys = [
+  //   {
+  //     label: "0",
+  //     value: "0",
+  //     type: "numeric",
+  //     buttonStyle: "numeric-key special",
+  //   },
+  //   { label: "·", value: ".", type: "fx", buttonStyle: "numeric-key" },
+  // ];
 
   return (
     <div className={styles.wrapper}>
@@ -68,11 +68,11 @@ export function Keypad(props) {
           />
         ))} */}
         <SpecialButton label={0} onClick={handleClickButton} />
-        <NummericButton label={"."} onClick={handleClickButton} />
+        <NummericButton label={","} onClick={handleClickButton} />
       </div>
       <div className={styles.operators}>
         {operatorKeys.map((operatorKey) => (
-          <OpButton
+          <OperatorButton
             key={operatorKey.label}
             label={operatorKey.label}
             value={operatorKey.value}

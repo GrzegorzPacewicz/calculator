@@ -7,7 +7,7 @@ function App() {
     <>
       <div className={styles.calculatorView}>
         <div className={styles.viewport}>
-          <Display value={5} />
+          <Display />
           <Keypad />
         </div>
       </div>

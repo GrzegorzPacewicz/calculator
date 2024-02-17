@@ -24,11 +24,11 @@ export function NummericButton({ value, handleButtonClick, label }) {
   );
 }
 
-export function OpButton({ value, handleButtonClick, label }) {
+export function OperatorButton({ value, handleButtonClick, label }) {
   return (
     <button
       name={value}
-      className={styles.opButton}
+      className={styles.operatorButton}
       onClick={handleButtonClick}
     >
       {label}
