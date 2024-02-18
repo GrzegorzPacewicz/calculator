@@ -87,6 +87,7 @@ export function Keypad({ actionToPerform, allClear }) {
             label={operatorKey.label}
             value={operatorKey.value}
             onClick={handleClickButton}
+            type="operator"
           />
         ))}
       </div>
