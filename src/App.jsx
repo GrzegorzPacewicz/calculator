@@ -3,12 +3,18 @@ import { Display } from "./components/Display/Display";
 import { Keypad } from "./components/Keypad/Keypad";
 
 function App() {
+  const handleActionToPerform = () => {};
+  const isScreenClear = () => {};
+
   return (
     <>
       <div className={styles.calculatorView}>
         <div className={styles.viewport}>
           <Display />
-          <Keypad />
+          <Keypad
+            actionToPerform={handleActionToPerform}
+            allClear={isScreenClear}
+          />
         </div>
       </div>
     </>
