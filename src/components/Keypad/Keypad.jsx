@@ -28,13 +28,7 @@ export function Keypad({ actionToPerform, allClear }) {
   ];
 
   const lastRowKeys = [
-    // {
-    //   label: "0",
-    //   value: "0",
-    //   type: "numeric",
-    //   buttonStyle: "numeric-key special",
-    // },
-    { label: "·", value: ".", type: "fx", buttonStyle: "numeric-key" },
+    { label: ",", value: ".", type: "fx", buttonStyle: "numeric-key" },
   ];
 
   return (
@@ -66,10 +60,6 @@ export function Keypad({ actionToPerform, allClear }) {
           value={0}
           type="numeric"
         />
-
-        {/* i'm not sure if this works so add map  */}
-        {/* <NummericButton label={","} onClick={handleClickButton} value={"."} /> */}
-
         {lastRowKeys.map((lastRowKey) => (
           <NummericButton
             key={lastRowKey.label}
