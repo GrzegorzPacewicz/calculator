@@ -27,7 +27,7 @@ export function Keypad({ actionToPerform, allClear }) {
     { label: "=", value: "=" },
   ];
 
-  const lastRowKeys = [
+  const lastRowKey = [
     { label: ",", value: ".", type: "fx", buttonStyle: "numeric-key" },
   ];
 
@@ -60,7 +60,7 @@ export function Keypad({ actionToPerform, allClear }) {
           value={0}
           type="numeric"
         />
-        {lastRowKeys.map((lastRowKey) => (
+        {lastRowKey.map((lastRowKey) => (
           <NummericButton
             key={lastRowKey.label}
             label={lastRowKey.label}
