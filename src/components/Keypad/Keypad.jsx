@@ -6,8 +6,7 @@ import {
 } from "../Button/Buttons";
 import styles from "./Keypad.module.css";
 
-export function Keypad(props) {
-  const { actionToPerform, allClear } = props;
+export function Keypad({ actionToPerform, allClear }) {
   const handleClickButton = (value, keyType) => {
     actionToPerform(value, keyType);
   };
@@ -28,15 +27,15 @@ export function Keypad(props) {
     { label: "=", value: "=" },
   ];
 
-  // const lastRowKeys = [
-  //   {
-  //     label: "0",
-  //     value: "0",
-  //     type: "numeric",
-  //     buttonStyle: "numeric-key special",
-  //   },
-  //   { label: "·", value: ".", type: "fx", buttonStyle: "numeric-key" },
-  // ];
+  const lastRowKeys = [
+    // {
+    //   label: "0",
+    //   value: "0",
+    //   type: "numeric",
+    //   buttonStyle: "numeric-key special",
+    // },
+    { label: "·", value: ".", type: "fx", buttonStyle: "numeric-key" },
+  ];
 
   return (
     <div className={styles.wrapper}>
@@ -58,7 +57,12 @@ export function Keypad(props) {
             onClick={handleClickButton}
           />
         ))}
-        {/* 
+
+        <SpecialButton label={0} onClick={handleClickButton} value={0} />
+
+        {/* i'm not sure if this works so add map  */}
+        {/* <NummericButton label={","} onClick={handleClickButton} value={"."} /> */}
+
         {lastRowKeys.map((lastRowKey) => (
           <NummericButton
             key={lastRowKey.label}
@@ -66,9 +70,7 @@ export function Keypad(props) {
             value={lastRowKey.value}
             onClick={handleClickButton}
           />
-        ))} */}
-        <SpecialButton label={0} onClick={handleClickButton} />
-        <NummericButton label={","} onClick={handleClickButton} />
+        ))}
       </div>
       <div className={styles.operators}>
         {operatorKeys.map((operatorKey) => (
