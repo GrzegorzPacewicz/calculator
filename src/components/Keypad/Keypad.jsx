@@ -46,6 +46,7 @@ export function Keypad({ actionToPerform, allClear }) {
             label={functionKey.label}
             value={functionKey.value}
             onClick={handleClickButton}
+            type="fx"
           />
         ))}
 
@@ -55,10 +56,16 @@ export function Keypad({ actionToPerform, allClear }) {
             label={numericKey}
             value={numericKey}
             onClick={handleClickButton}
+            type="numeric"
           />
         ))}
 
-        <SpecialButton label={0} onClick={handleClickButton} value={0} />
+        <SpecialButton
+          label={0}
+          onClick={handleClickButton}
+          value={0}
+          type="numeric"
+        />
 
         {/* i'm not sure if this works so add map  */}
         {/* <NummericButton label={","} onClick={handleClickButton} value={"."} /> */}
@@ -69,6 +76,7 @@ export function Keypad({ actionToPerform, allClear }) {
             label={lastRowKey.label}
             value={lastRowKey.value}
             onClick={handleClickButton}
+            type={lastRowKey.type}
           />
         ))}
       </div>

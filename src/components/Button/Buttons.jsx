@@ -1,32 +1,48 @@
 import styles from "./Buttons.module.css";
 
-export function FunctionButton({ value, onClick, label }) {
+export function FunctionButton({ value, handleButtonClick, label, type }) {
   return (
-    <button name={value} className={styles.functionButton} onClick={onClick}>
+    <button
+      name={value}
+      className={styles.functionButton}
+      onClick={() => handleButtonClick(value, type)}
+    >
       {label}
     </button>
   );
 }
 
-export function NummericButton({ value, onClick, label }) {
+export function NummericButton({ value, handleButtonClick, label, type }) {
   return (
-    <button name={value} className={styles.numericButton} onClick={onClick}>
+    <button
+      name={value}
+      className={styles.numericButton}
+      onClick={() => handleButtonClick(value, type)}
+    >
       {label}
     </button>
   );
 }
 
-export function OperatorButton({ value, onClick, label }) {
+export function OperatorButton({ value, handleButtonClick, label, type }) {
   return (
-    <button name={value} className={styles.operatorButton} onClick={onClick}>
+    <button
+      name={value}
+      className={styles.operatorButton}
+      onClick={() => handleButtonClick(value, type)}
+    >
       {label}
     </button>
   );
 }
 
-export function SpecialButton({ value, onClick, label }) {
+export function SpecialButton({ value, handleButtonClick, label, type }) {
   return (
-    <button name={value} className={styles.specialButton} onClick={onClick}>
+    <button
+      name={value}
+      className={styles.specialButton}
+      onClick={() => handleButtonClick(value, type)}
+    >
       {label}
     </button>
   );
