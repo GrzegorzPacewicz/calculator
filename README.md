@@ -1,4 +1,4 @@
-# IOS Calcuclator App
+# iOS Calcuclator App
 
 This is a simple calculator app - a replica of the iOS Calculator. It is built using React, styled with CSS modules, and leverages the useState and useEffect hooks for state management and side effects.
 
