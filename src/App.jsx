@@ -104,10 +104,14 @@ function App() {
 
   const handleClickOperator = (operator) => {
     const inputValue = parseFloat(screenValue);
+
     if (accumulativeValue === null) {
-      setAccumulativeValue(inputValue);
+      setAccumulativeValue(0);
     } else {
       if (currentOperator) {
+        if (currentOperator === "/" && inputValue === 0) {
+          return;
+        }
         const resultValue = operate(
           currentOperator,
           accumulativeValue,
@@ -117,6 +121,7 @@ function App() {
         setScreenValue(String(resultValue));
       }
     }
+
     setExpectsOperand(true);
     setCurrentOperator(operator);
   };
